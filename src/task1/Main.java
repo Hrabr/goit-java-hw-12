@@ -22,15 +22,15 @@ import java.util.concurrent.Semaphore;
 
     public void releaseOxygen() throws InterruptedException, BrokenBarrierException {
         o.acquire();
-        System.out.print("O");
         h2o.await();
+        System.out.print("O");
         o.release();
     }
 
     public void releaseHydrogen() throws InterruptedException, BrokenBarrierException {
         h.acquire();
-        System.out.print("H");
         h2o.await();
+        System.out.print("H");
         h.release();
     }
 
